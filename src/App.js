@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+// import { Routes, Route } from 'react-router-dom';
+
+// Componentes
+import Nav from './Components/Nav/Nav';
+import Main from './Components/Main/Main';
+import Footer from './Components/Footer/Footer';
+
+// views 
+import Sobremi from './views/SobreMi/Sobremi';
+import Herramientas from './views/Herramientas/Herramientas';
+import Proyectos from './views/Proyectos/Proyectos';
+import Contactos from './views/Contactos/Contactos';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='overflow-x-hidden'>
+      <Nav/>
+      <Main/>
+      <Sobremi/>
+      <Herramientas/>
+      <Proyectos/>
+      <Contactos/>
+      {/* <Routes>
+        <Route path='/sobremi' element={<Sobremi/>}></Route>
+        <Route path='/herramientas' element={<Herramientas/>}></Route>
+        <Route path='/proyectos' element={<Proyectos/>}></Route>
+      </Routes> */}
+      <Footer/>
     </div>
   );
 }
