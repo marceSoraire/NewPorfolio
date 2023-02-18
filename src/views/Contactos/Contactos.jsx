@@ -41,7 +41,7 @@ function Contactos() {
                 <div className="max-w-[1000px] mx-auto">
                     <form onSubmit={senMessage}>
                         <div>
-                            <input autoFocus
+                            <input
                                 type='text'
                                 placeholder='Nombre'
                                 name='name'
