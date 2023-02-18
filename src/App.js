@@ -14,18 +14,13 @@ import Contactos from './views/Contactos/Contactos';
 
 function App() {
   return (
-    <div className='overflow-x-hidden'>
+    <div>
       <Nav/>
       <Main/>
       <Sobremi/>
       <Herramientas/>
       <Proyectos/>
       <Contactos/>
-      {/* <Routes>
-        <Route path='/sobremi' element={<Sobremi/>}></Route>
-        <Route path='/herramientas' element={<Herramientas/>}></Route>
-        <Route path='/proyectos' element={<Proyectos/>}></Route>
-      </Routes> */}
       <Footer/>
     </div>
   );

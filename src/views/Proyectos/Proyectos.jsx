@@ -11,21 +11,16 @@ import mentoria from './img/mentoria.png'
 import rpg from './img/1.png'
 import sda from './img/2.png'
 import cl from './img/3.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles// ..
 import Cards from '../../Components/Cards/Cards';
 import { IoArrowDownSharp, IoArrowUp } from "react-icons/io5";
 
 const Proyectos = () => {
 
   const [ver, setVer] = useState(true);
-
-  const handleOnChange = () => {
-    setVer(!ver)
-  }
+  const handleOnChange = () => setVer(!ver)
 
   return (
-    <div className='w-full md:w-[80%] md:mx-auto my-6 md:p-6'>
+    <div id='proyectos' className='w-full md:w-[80%] md:mx-auto my-6 md:p-6'>
       <h2 className="font-roboto text-center text-gray-800 text-3xl my-6">Proyectos</h2>
       <div className='flex flex-wrap justify-between'>
         <Cards
@@ -54,9 +49,11 @@ const Proyectos = () => {
         />
       </div>
       {ver ?
-        <button onClick={handleOnChange} className='flex mx-auto mt-10 border-2 border-gray-600 p-1 rounded-md bg-blue-500 text-white'>
-          Ver Mas<IoArrowDownSharp size={20} className='my-auto' />
-        </button>
+        <div className="w-full flex justify-center">
+          <button onClick={handleOnChange} className='mt-5 border border-gray-400 rounded-md w-[280px] mx-auto sm:w-[325px] font-poppins text-[18px] bg-white flex items-center justify-center py-1 hover:cursor-pointer hover:scale-105 duration-300 hover:shadow-lg'>
+            Ver Mas<IoArrowDownSharp size={20} />
+          </button>
+        </div>
         :
         <>
           <div className='flex flex-wrap justify-between'>
@@ -117,34 +114,35 @@ const Proyectos = () => {
               art='proyect'
               title='RPGLE || sin codigo'
               text='Proyecto realizado en PUB400, representa la logica de un programa'
-              // codigo='none'
-              // proyecto='none'
+            // codigo='none'
+            // proyecto='none'
             />
             <Cards
               img={sda}
               art='proyect'
               title='SDA || sin codigo'
               text='El sda es utilizado para genrear las pantallas y/o ventanas del rpgle'
-              // codigo='none'
-              // proyecto='none'
+            // codigo='none'
+            // proyecto='none'
             />
             <Cards
               img={cl}
               art='proyect'
               title='CL || sin codigo'
               text='Los archivos cl son generados en el SEU para generar interaccion con el usuario'
-              // codigo='none'
-              // proyecto='none'
+            // codigo='none'
+            // proyecto='none'
             />
           </div>
-          <button onClick={handleOnChange} className='flex mx-auto mt-10 border-2 border-gray-600 p-1 rounded-md bg-blue-500 text-white'>
-            Ver Menos<IoArrowUp size={20} className='my-auto' />
-          </button>
+          <div className="w-full flex justify-center">
+            <button onClick={handleOnChange} className='mt-5 border border-gray-400 rounded-md w-[280px] mx-auto sm:w-[325px] font-poppins text-[18px] bg-white flex items-center justify-center py-1 hover:cursor-pointer hover:scale-105 duration-300 hover:shadow-lg'>
+              Ver Menos<IoArrowUp size={20} />
+            </button>
+          </div>
         </>
       }
     </div>
   )
 }
 
-AOS.init();
 export default Proyectos
