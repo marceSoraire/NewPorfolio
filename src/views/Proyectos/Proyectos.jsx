@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import rick from './img/rickandmorty.jpg';
+import juegos from './img/gameTimes.jpg';
 import acuario from './img/acuario2.jpg';
 import futbol from './img/canchas.png';
 import abm from './img/ambientar.png'
-import cine from './img/new.jpg'
+// import cine from './img/new.jpg'
 import calcu from './img/calculadora.jpg'
 import ahorcado from './img/ahorcado.png'
 import imgAc from './img/img02.jpg'
@@ -18,26 +19,25 @@ const Proyectos = () => {
 
   const [ver, setVer] = useState(true);
   const handleOnChange = () => setVer(!ver)
-
   return (
     <div id='proyectos' className='w-full md:w-[80%] md:mx-auto my-6 md:p-6'>
       <h2 className="font-roboto text-center text-gray-800 text-3xl my-6">Proyectos</h2>
       <div className='flex flex-wrap justify-between'>
+        <Cards
+          img={juegos}
+          art='proyect'
+          title='Multi Juegos'
+          text='Realizado con algunos juegos para trabajar logica, trabajando actualmente'
+          codigo='https://github.com/marceSoraire/multiJuegos'
+          proyecto='https://multijuegos.netlify.app'
+        />
         <Cards
           img={futbol}
           art='proyect'
           title='FutbolEstadium'
           text='Aplicacion Destokp y mobile. Realizado en React y Firebase'
           codigo='https://github.com/marceSoraire/futbolEstadium'
-          proyecto='https://espontanea-trufa-c8b622.netlify.app'
-        />
-        <Cards
-          img={acuario}
-          art='proyect'
-          title='Pequeño Ser'
-          text='Ecommerce, trabajo final de CoderHouse realizado con JavaScript'
-          codigo='https://github.com/marceSoraire/trabajoFinalAcuariojs'
-          proyecto='https://marcesoraire.github.io/trabajoFinalAcuariojs/'
+          proyecto='https://futbolclub.netlify.app'
         />
         <Cards
           img={abm}
@@ -45,7 +45,7 @@ const Proyectos = () => {
           title='Ambientar'
           text='Ecommerce, trabajo final de CH realizado con React y firebase'
           codigo='https://github.com/marceSoraire/React.js-Ambientar'
-          proyecto='https://marcesoraire.github.io/React.js-Ambientar/'
+          proyecto='https://ambientar.netlify.app'
         />
       </div>
       {ver ?
@@ -58,20 +58,20 @@ const Proyectos = () => {
         <>
           <div className='flex flex-wrap justify-between'>
             <Cards
-              img={cine}
+              img={imgAc}
               art='proyect'
-              title='Cine'
-              text='API de peliculas realizado en React.js, proyecto personal'
-              codigo='https://github.com/marceSoraire/API-Peliculas'
-              proyecto='https://espontanea-trufa-c8b622.netlify.app'
+              title='Pequeño Ser'
+              text='Ecommerce, trabajo final de CoderHouse realizado con JavaScript'
+              codigo='https://github.com/marceSoraire/trabajoFinalAcuariojs'
+              proyecto='https://marcesoraire.github.io/trabajoFinalAcuariojs/'
             />
             <Cards
-              img={rick}
+              img={mentoria}
               art='proyect'
-              title='proyect'
-              text='API de Rick and Morty realizado en React.js, proyecto personal'
-              codigo='https://github.com/marceSoraire/RickAndMorty'
-              proyecto='https://espontanea-trufa-c8b622.netlify.app'
+              title='Mentoria'
+              text='Proyecto producto del top 10 en la carrera de React en CoderHouse'
+              codigo='none'
+              proyecto='https://mentoriait.netlify.app/'
             />
             <Cards
               img={calcu}
@@ -84,6 +84,14 @@ const Proyectos = () => {
           </div>
           <div className='flex flex-wrap justify-between'>
             <Cards
+              img={rick}
+              art='proyect'
+              title='proyect'
+              text='API de Rick and Morty realizado en React.js, proyecto personal'
+              codigo='https://github.com/marceSoraire/RickAndMorty'
+              proyecto='https://espontanea-trufa-c8b622.netlify.app'
+            />
+            <Cards
               img={ahorcado}
               art='proyect'
               title='Ahorcado'
@@ -92,21 +100,14 @@ const Proyectos = () => {
               proyecto='https://espontanea-trufa-c8b622.netlify.app'
             />
             <Cards
-              img={imgAc}
+              img={acuario}
               art='proyect'
               title='Pequeño Ser'
               text='Acuario realizado solo en HTML, CSS y SASS'
               codigo='https://github.com/marceSoraire/DesarrolloWeb-Acuario'
               proyecto='https://marcesoraire.github.io/DesarrolloWeb-Acuario/'
             />
-            <Cards
-              img={mentoria}
-              art='proyect'
-              title='Mentoria'
-              text='Proyecto producto del top 10 en la carrera de React en CoderHouse'
-              codigo='none'
-              proyecto='https://mentoriait.netlify.app/'
-            />
+
           </div>
           <div className='flex flex-wrap justify-between'>
             <Cards

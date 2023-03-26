@@ -9,7 +9,7 @@ import { SiGithub } from "react-icons/si";
 
 const Cards = (props) => {
     return (
-        <Card className='my-10 mx-auto md:my-4 xl:mx-1 max-w-[325px] min-h-[450px] border-2 border-gray-600 hover:shadow-xl hover:shadow-gray-600'>
+        <Card className='my-10 mx-auto md:my-4 xl:mx-1 max-w-[320px] min-h-[450px] border-2 border-gray-600 hover:shadow-xl hover:shadow-gray-600'>
             <CardMedia
                 className='h-[50%] sm:h-[60%] border-b-2 border-gray-400'
                 image={props.img}
